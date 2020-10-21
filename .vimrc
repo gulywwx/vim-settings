@@ -170,8 +170,11 @@
   nnoremap <leader>j :wincmd j<CR>
   nnoremap <leader>k :wincmd k<CR>
   nnoremap <leader>l :wincmd l<CR>
-  vnoremap J :m '>+1<CR>gv=gv
-  vnoremap K :m '<-2<CR>gv=gv
+
+  vnoremap <Leader>y "+y        " copy selected to system clipboard
+  nnoremap <Leader>p "+p        " copy from system clipboard  to vim
+  vnoremap J :m '>+1<CR>gv=gv   " move line down
+  vnoremap K :m '<-2<CR>gv=gv   " move line up
 
   " Use <C-L> to clear the highlighting of :set hlsearch
   if maparg('<C-L>', 'n') ==# ''
